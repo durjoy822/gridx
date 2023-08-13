@@ -37,7 +37,7 @@
                             <h2>Edit Blog  basic information</h2>
                         </div>
                         <div class="body">
-                            <form action="{{route('blog.update',['id'=>$blog->id])}}" method="post" id="basic-form" enctype="multipart/form-data" >@csrf
+                            <form action="{{route("blog.update",$blog->id)}}" method="post" id="basic-form" enctype="multipart/form-data" >@csrf
                                 <div class="form-group">
                                     <label>Select post side </label>
                                     <select name="side" class="form-control">

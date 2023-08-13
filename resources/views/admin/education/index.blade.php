@@ -70,7 +70,7 @@
                                                 <td>
                                                     <p class="demo-button">
                                                         <a href="{{route('education.edit',['id'=>$education->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>
-                                                        <a href="{{route('education.delete',['id'=>$education->id])}}> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
+                                                        <a href="{{route('education.delete',['id'=>$education->id])}}"> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
                                                     </p>
                                                 </td>
                                             </tr>

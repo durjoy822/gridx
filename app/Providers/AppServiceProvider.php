@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
     {
         view::composer('*' ,function($view){
             $view->with('cvDownload',CvUpload::where('status',1)->first());
-            $view->with('skills',Skill::where('status',1)->inRandomOrder()->get());
+            $view->with('skills',Skill::inRandomOrder()->get());
             $view->with('projectcount',Project::where('status',1)->count());
             $view->with('clientcount',Client::count());
             $view->with('project',Project::count());

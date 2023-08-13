@@ -72,6 +72,7 @@ class Project extends Model
         self::$project->status              =$request->status;
         self::$project->save();
     }
+
     public static function projectDelete($id){
             self::$project=Project::find($id);
             if (file_exists(self::$project->image))

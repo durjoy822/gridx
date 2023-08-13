@@ -3,8 +3,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Iconic Bootstrap 4.5.0 Admin Template">
 <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+@php $logo = \App\Models\Logo::where('status',1)->first(); @endphp
+@if($logo=!null)
 
+@else
+    <link rel="icon" href="{{asset($logo->image)}}" type="image/x-icon" >
+
+@endif
 <!-- VENDOR CSS -->
 <link rel="stylesheet" href="{{asset('backend')}}/assets/vendor/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{asset('backend')}}/assets/vendor/font-awesome/css/font-awesome.min.css">

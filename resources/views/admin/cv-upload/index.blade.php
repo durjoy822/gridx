@@ -69,7 +69,7 @@
                                                     <p class="demo-button">
                                                         <a href="http://localhost/gridx/public/{{$cvUpload->file}}" download> <button type="button" class="btn btn-warning"><i class="icon-cloud-download"></i></button></a>
                                                         <a href="{{route('cv.edit',['id'=>$cvUpload->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>
-                                                        <a href="{{route('cv.delete',['id'=>$cvUpload->id])}}> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
+                                                        <a href="{{route('cv.delete',['id'=>$cvUpload->id])}}"> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
                                                     </p>
                                                 </td>
                                             </tr>

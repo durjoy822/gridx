@@ -69,6 +69,7 @@
                                     @if($blogs->count())
                                         @foreach($blogs as $blog)
                                             <tr>
+                                                <td></td>
                                                 <td>{{$loop->iteration}}</td>
                                                 <td>
                                                     <img src="{{asset($blog->image)}}" style="width: 100px">
@@ -86,7 +87,8 @@
                                                 <td>
                                                     <p class="demo-button">
                                                         <a href="{{route('blog.edit',['id'=>$blog->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>
-                                                        <a href="{{route('blog.delete',['id'=>$blog->id])}}> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
+                                                        <a href="{{route('blog.delete',['id'=>$blog->id])}}"> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
+
                                                     </p>
                                                 </td>
                                             </tr>
@@ -96,6 +98,10 @@
                                             <td colspan="9" class="text-center text-danger">No data !<br> Table Empty</td>
                                         </tr>
                                     @endif
+{{--                                    @foreach($blogs as $key=>$blog)--}}
+{{--                                        {{$blog->id}}<br>--}}
+
+{{--                                    @endforeach--}}
                                     </tbody>
                                 </table>
                             </div>

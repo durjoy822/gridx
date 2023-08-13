@@ -20,6 +20,7 @@ use App\Http\Controllers\AdminProfileInfoController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\ContactformController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\WorkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +33,8 @@ use App\Http\Controllers\ClientController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('home.home');
+//Route::get('/work/index', function () {
+//    return view('admin.work.index');
 //});
 Route::get('/',[HomeController::class,'Home'])->name('home');
 Route::get('/about',[HomeController::class,'About'])->name('about');
@@ -78,13 +79,16 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/education/update/{id}',[EducationController::class,'educationUpdate'])->name('education.update');
     Route::get('/education/delete/{id}',[EducationController::class,'educationDelete'])->name('education.delete');
 
-    Route::get('/project/index',[ProjectController::class,'projectIndex'])->name('project.index');
-    Route::get('/project/add',[ProjectController::class,'projectAdd'])->name('project.add');
-    Route::post('/project/store',[ProjectController::class,'projectStore'])->name('project.store');
-    Route::get('/project/edit/{id}',[ProjectController::class,'projectEdit'])->name('project.edit');
-    Route::get('/project/details/{id}',[ProjectController::class,'projectDetails'])->name('project.details');
-    Route::post('/project/update/{id}',[ProjectController::class,'projectUpdate'])->name('project.update');
-    Route::get('/project/delete/{id}',[ProjectController::class,'projectDelete'])->name('project.delete');
+   Route::get('/project/index',[ProjectController::class,'projectIndex'])->name('project.index');
+   Route::get('/project/add',[ProjectController::class,'projectAdd'])->name('project.add');
+   Route::post('/project/store',[ProjectController::class,'projectStore'])->name('project.store');
+   Route::get('/project/edit/{id}',[ProjectController::class,'projectEdit'])->name('project.edit');
+   Route::get('/project/details/{id}',[ProjectController::class,'projectDetails'])->name('project.details');
+   Route::post('/project/update/{id}',[ProjectController::class,'projectUpdate'])->name('project.update');
+   Route::get('/project/delete/{id}',[ProjectController::class,'projectDelete'])->name('project.delete');
+
+    Route::get('/work/index',[WorkController::class,'workIndex'])->name('work.home');
+    // Route::get('/work/index',[WorkController::class,'workIndex'])->name('work.home');
 
     Route::get('/blog/index',[BlogController::class,'blogIndex'])->name('blog.index');
     Route::get('/blog/add',[BlogController::class,'blogAdd'])->name('blog.add');

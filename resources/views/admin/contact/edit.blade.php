@@ -39,34 +39,21 @@
                             <form action="{{route('contact.update',['id'=>$contact->id])}}" method="post" id="basic-form" enctype="multipart/form-data" >@csrf
                                 <div class="row">
                                     <div class="col-md-6 form-group">
-                                        <label>Mail_us(text)</label>
-                                        <input type="text" name="email_us" value="{{$contact->email_us}}" value="{{old('email_us')}}"  class="form-control" >
-                                        <div class="text-danger">@error('email_us'){{$message}}@enderror </div>
-                                    </div>
-                                    <div class="col-md-6 form-group">
                                         <label>Email_one</label>
                                         <input type="text" name="email_1" value="{{$contact->email_1}}" value="{{old('email_1')}}"  class="form-control" >
                                         <div class="text-danger">@error('email_1'){{$message}}@enderror </div>
                                     </div>
-                                </div>
-                                <div class="row">
                                     <div class="col-md-6 form-group">
                                         <label>Email_two</label>
                                         <input type="email_2" name="email_2" value="{{$contact->email_2}}" value="{{old('email_2')}}" class="form-control" >
                                         <div class="text-danger">@error('email_2'){{$message}}@enderror </div>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <div class="col-md-6 form-group">
                                         <label>Email icon</label>
                                         <input type="text" name="icon_1" value="{{$contact->icon_1}}" value="{{old('icon_1')}}"  class="form-control" >
                                         <div class="text-danger">@error('icon_1'){{$message}}@enderror </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <label>Contact_us(text)</label>
-                                        <input type="text" name="contact_us" value="{{$contact->contact_us}}" value="{{old('contact_us')}}"  class="form-control" >
-                                        <div class="text-danger">@error('contact_us'){{$message}}@enderror </div>
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label>Number One</label>
@@ -87,11 +74,6 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <label>Location </label>
-                                        <input type="text" name="location" value="{{$contact->location}}" value="{{old('location')}}" class="form-control" >
-                                        <div class="text-danger">@error('location'){{$message}}@enderror </div>
-                                    </div>
                                     <div class="col-md-6 form-group">
                                         <label>Location One</label>
                                         <input type="text" name="location_1" value="{{$contact->location_1}}" value="{{old('location_1')}}"  class="form-control" >

@@ -18,7 +18,7 @@
                         <div class="d-flex flex-row-reverse">
                             <div class="page_action">
                                 {{--                                <button type="button" class="btn btn-primary"><i class="fa fa-download"></i> Download report</button>--}}
-                                <a href="{{route('logo.add')}}"> <button type="button" class="btn btn-secondary"><i class="icon-plus"></i> Add  info</button></a>
+                                <a href="{{route('logo.add')}}"> <button type="button" class="btn btn-secondary"><i class="icon-plus"></i> Add  logo</button></a>
                             </div>
                             <div class="p-2 d-flex">
 
@@ -68,7 +68,7 @@
                                                 <td>
                                                     <p class="demo-button">
                                                         <a href="{{route('logo.edit',['id'=>$logo->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>
-                                                        <a href="{{route('logo.delete',['id'=>$logo->id])}}> <button type="button" class="btn btn-danger" ><i class="fa fa-trash-o"></i></button></a>
+                                                        <a href="{{route('logo.delete',['id'=>$logo->id])}}"> <button type="button" class="btn btn-danger" ><i class="fa fa-trash-o"></i></button></a>
                                                     </p>
                                                 </td>
                                             </tr>

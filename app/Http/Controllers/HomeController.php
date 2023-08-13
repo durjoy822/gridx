@@ -58,7 +58,7 @@ class HomeController extends Controller
     }
     public function Skill(){
         return view('home.skill',[
-            'chartData' => Skill::where('status',1)->get(),
+            'chartData' => Skill::all(),
         ]);
     }
 

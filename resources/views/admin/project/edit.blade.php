@@ -37,7 +37,8 @@
                             <h2>Project basic information</h2>
                         </div>
                         <div class="body">
-                            <form action="{{route('project.update',['id'=>$project->id])}}" method="post" id="basic-form" enctype="multipart/form-data" >@csrf
+{{--                            <form action="{{route('project.update',['id'=>$project->id])}}" method="post" id="basic-form" enctype="multipart/form-data" >--}}
+                                @csrf
                                 <div> <label>Category Select </label></div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">

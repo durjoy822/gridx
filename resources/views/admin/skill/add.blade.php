@@ -59,10 +59,6 @@
                                         <div class="text-danger">@error('icon'){{$message}}@enderror </div>
                                     </div>
                                 </div>
-                                <div>Status</div>
-                                <label class="fancy-radio"><input name="status" value="1" type="radio"><span><i></i>Published</span></label>
-                                <label class="fancy-radio"><input name="status" value="0" type="radio" checked><span><i></i>Unpublished</span></label>
-                                <br>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>

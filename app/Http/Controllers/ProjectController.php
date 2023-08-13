@@ -21,12 +21,18 @@ class ProjectController extends Controller
         Session::flash('success','Project Add Successful!');
         return redirect()->route('project.index');
     }
+//    public function projectEdit($id){
+//       return  view('admin.project.edit', [
+//           'project'=>Project::find( (int)$id),
+//       ]);
+//
+//    }
     public function projectEdit($id){
-        return view('admin.project.edit',[
-            'project'=>Project::find($id),
-        ]);
-
+         $id_int  = intval($id);
+        $project = Project::find($id_int);
+        return view('admin.project.edit',compact('project'));
     }
+
     public function projectDetails($id){
         return view('admin.project.details',[
             'details'=>Project::find($id),

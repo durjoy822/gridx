@@ -69,7 +69,7 @@
                                                 <td>
                                                     <p class="demo-button">
                                                         <a href="{{route('client.edit',['id'=>$client->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>
-                                                        <a href="{{route('client.delete',['id'=>$client->id])}}> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
+                                                        <a href="{{route('client.delete',['id'=>$client->id])}}"> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
                                                     </p>
                                                 </td>
                                             </tr>

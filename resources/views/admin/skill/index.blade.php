@@ -33,9 +33,6 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            @foreach($skills as $skill)
-                                <p>{{$skill->name}}</p>
-                            @endforeach
                             <h2>Skill Info Table<small> </small> </h2>
                         </div>
                         <div class="body">
@@ -49,7 +46,6 @@
                                         <th>Skill Percentage</th>
                                         <th>Chart_Color</th>
                                         <th>Icon</th>
-                                        <th>Status</th>
                                         <th>Action</th>
 
                                     </tr>
@@ -61,7 +57,6 @@
                                         <th>Skill Percentage</th>
                                         <th>Chart_Color</th>
                                         <th>Icon</th>
-                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                     </tfoot>
@@ -74,10 +69,6 @@
                                                 <td>{{$skill->skill_percentage}}</td>
                                                 <td>{{$skill->chart_color}}</td>
                                                 <td>{{$skill->icon}}</td>
-                                                <td>
-                                                    {{$skill->status==1?'published':'Unpublished'}}
-                                                </td>
-
                                                 <td>
                                                     <p class="demo-button">
                                                         <a href="{{route('skill.edit',['id'=>$skill->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>

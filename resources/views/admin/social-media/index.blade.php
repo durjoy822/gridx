@@ -74,7 +74,7 @@
                                                 <td>
                                                     <p class="demo-button">
                                                         <a href="{{route('social.edit',['id'=>$social->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>
-                                                        <a href="{{route('social.delete',['id'=>$social->id])}}> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
+                                                        <a href="{{route('social.delete',['id'=>$social->id])}}"> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
                                                     </p>
                                                 </td>
                                             </tr>

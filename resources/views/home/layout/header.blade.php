@@ -4,7 +4,7 @@
         <div class="gx-row d-flex align-items-center justify-content-between">
             <a href="{{route('home')}}" class="logo">
                 @php $logo = \App\Models\Logo::where('status',1)->first(); @endphp
-                <img src="{{asset($logo->image)}}" style="height: 50px" alt="Logo">
+                <img src="{{asset($logo->image)}}" style="width: 50px" alt="Logo">
             </a>
 
             <nav class="navbar">

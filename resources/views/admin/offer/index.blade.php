@@ -86,7 +86,7 @@
                                                 <td>
                                                     <p class="demo-button">
                                                         <a href="{{route('offer.edit',['id'=>$offer->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>
-                                                        <a href="{{route('offer.delete',['id'=>$offer->id])}}> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
+                                                        <a href="{{route('offer.delete',['id'=>$offer->id])}}"> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
                                                     </p>
                                                 </td>
                                             </tr>

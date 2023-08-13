@@ -30,7 +30,6 @@ class Skill extends Model
         self::$skill->skill_percentage  =$request->skill_percentage;
         self::$skill->chart_color       =$request->chart_color;
         self::$skill->icon              =$request->icon;
-        self::$skill->status            =$request->status;
         self::$skill->save();
 
     }
@@ -41,7 +40,6 @@ class Skill extends Model
         self::$skill->skill_percentage=$request->skill_percentage;
         self::$skill->chart_color=$request->chart_color;
         self::$skill->icon=$request->icon;
-        self::$skill->status=$request->status;
         self::$skill->save();
 
     }

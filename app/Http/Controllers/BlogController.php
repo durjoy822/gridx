@@ -9,9 +9,8 @@ use Illuminate\Support\Facades\Session;
 class BlogController extends Controller
 {
     public function blogIndex(){
-        return view('admin.blog.index',[
-            'blogs'=>Blog::latest()->get(),
-        ]);
+        $blogs=Blog::latest()->get();
+        return view('admin.blog.index',compact("blogs"));
     }
     public function blogAdd(){
         return view('admin.blog.add');
