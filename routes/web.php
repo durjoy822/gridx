@@ -88,7 +88,6 @@ Route::group(['prefix' => 'admin'], function () {
    Route::get('/project/delete/{id}',[ProjectController::class,'projectDelete'])->name('project.delete');
 
     Route::get('/work/index',[WorkController::class,'workIndex'])->name('work.home');
-    // Route::get('/work/index',[WorkController::class,'workIndex'])->name('work.home');
 
     Route::get('/blog/index',[BlogController::class,'blogIndex'])->name('blog.index');
     Route::get('/blog/add',[BlogController::class,'blogAdd'])->name('blog.add');
