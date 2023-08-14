@@ -13,6 +13,7 @@ use App\Models\Offer;
 use App\Models\Project;
 use App\Models\Slider;
 use App\Models\SocialMeida;
+use App\Models\Work;
 use App\Models\Working_exprience;
 use Illuminate\Http\Request;
 use App\Models\Skill;
@@ -39,9 +40,9 @@ class HomeController extends Controller
     }
     public function Work(){
         return view('home.work',[
-            'categorys'=>Project::where('status',1)->get(),
-            'leftprojects'=>Project::where('status',1)->where('side','left')->get(),
-            'rightprojects'=>Project::where('status',1)->where('side','right')->get(),
+            'categorys'=>Work::where('status',1)->get(),
+            'leftprojects'=>Work::where('status',1)->where('side','left')->get(),
+            'rightprojects'=>Work::where('status',1)->where('side','right')->get(),
         ]);
     }
     public function Contact(){

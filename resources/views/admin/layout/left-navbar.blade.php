@@ -46,23 +46,23 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#Report" class="has-arrow"><i class="icon-social-dropbox mr-2" style="font-size: 20px"></i><span>Project</span></a>
-                            <ul>
-                                <li><a href="{{route('project.index')}}">list</a></li>
-                                <li><a href="{{route('project.add')}}">Add</a></li>
-                            </ul>
-                        </li>
-                        <li>
                             <a href="#Report" class="has-arrow"><i class="icon-social-dropbox mr-2" style="font-size: 20px"></i><span>Work</span></a>
                             <ul>
                                 <li><a href="{{route('work.home')}}">list</a></li>
-                                <li><a href="">Add</a></li>
+                                <li><a href="{{route('work.add')}}">Add</a></li>
                             </ul>
                         <li>
                             <a href="#Report" class="has-arrow"><i class="icon-notebook mr-2" style="font-size: 20px"></i><span>Blog</span></a>
                             <ul>
                                 <li><a href="{{route('blog.index')}}">list</a></li>
-                                <li><a href="{{route('blog.add')}}">Add</a></li>
+                                <li><a href="">Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#Report" class="has-arrow"><i class="icon-notebook mr-2" style="font-size: 20px"></i><span>Blog 2</span></a>
+                            <ul>
+                                <li><a href="{{route('blog.index')}}">list</a></li>
+                                <li><a href="">Add</a></li>
                             </ul>
                         </li>
                         <li>

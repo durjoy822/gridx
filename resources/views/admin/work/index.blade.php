@@ -18,8 +18,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="d-flex flex-row-reverse">
                             <div class="page_action">
-                                {{--                                <button type="button" class="btn btn-primary"><i class="fa fa-download"></i> Download report</button>--}}
-                                <a href="{{route('project.add')}}"> <button type="button" class="btn btn-secondary"><i class="icon-plus"></i> Add Project info</button></a>
+                                <a href="{{route('work.add')}}"> <button type="button" class="btn btn-secondary"><i class="icon-plus"></i> Add Project info</button></a>
                             </div>
                             <div class="p-2 d-flex">
 
@@ -66,7 +65,47 @@
                                     </tr>
                                     </tfoot>
                                     <tbody>
+                                    @if($works->count())
+                                        @foreach($works as $work)
+                                            <tr>
+                                                <td>{{$loop->iteration}}</td>
+                                                <td>
+                                                    <img src="{{asset($work->image)}}" style="width: 100px">
+                                                </td>
+                                                <td>
+                                                    @if($work->category==1)
+                                                        blog
+                                                    @elseif($work->category==2)
+                                                        E-commerce
+                                                    @elseif($work->category==3)
+                                                        Management App
+                                                    @elseif($work->category==4)
+                                                        Other
+                                                    @endif
+                                                </td>
+                                                <td>{{$work->side}}</td>
+                                                <td>{{$work->project_name}}</td>
+                                                <td>{{$work->server_link}}</td>
+                                                <td>{{$work->github_link}}</td>
+                                                <td>
+                                                    {{$work->status==1?'published':'Unpublished'}}
+                                                </td>
 
+                                                <td>
+                                                    <p class="demo-button">
+                                                        <a href="{{route('work.edit',['id'=>$work->id])}}"> <button type="button" class="btn btn-success"><i class="icon-book-open"></i></button></a>
+                                                        <a href="{{route('work.view',['id'=>$work->id])}}"> <button type="button" class="btn btn-warning"><i class="icon-eye"></i></button></a>
+                                                        <a href="{{route('work.delete',['id'=>$work->id])}}"> <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @else
+                                        <tr>
+                                            <td colspan="9" class="text-center text-danger">No data !<br> Table Empty</td>
+                                        </tr>
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>
@@ -74,9 +113,6 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 @endsection

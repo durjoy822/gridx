@@ -6,8 +6,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Working_exprienceController;
 use App\Http\Controllers\EducationController;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\ContactController;
@@ -21,7 +19,7 @@ use App\Http\Controllers\LogoController;
 use App\Http\Controllers\ContactformController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\WorkController;
-
+use App\Http\Controllers\PersonalBlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,22 +77,24 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/education/update/{id}',[EducationController::class,'educationUpdate'])->name('education.update');
     Route::get('/education/delete/{id}',[EducationController::class,'educationDelete'])->name('education.delete');
 
-   Route::get('/project/index',[ProjectController::class,'projectIndex'])->name('project.index');
-   Route::get('/project/add',[ProjectController::class,'projectAdd'])->name('project.add');
-   Route::post('/project/store',[ProjectController::class,'projectStore'])->name('project.store');
-   Route::get('/project/edit/{id}',[ProjectController::class,'projectEdit'])->name('project.edit');
-   Route::get('/project/details/{id}',[ProjectController::class,'projectDetails'])->name('project.details');
-   Route::post('/project/update/{id}',[ProjectController::class,'projectUpdate'])->name('project.update');
-   Route::get('/project/delete/{id}',[ProjectController::class,'projectDelete'])->name('project.delete');
-
     Route::get('/work/index',[WorkController::class,'workIndex'])->name('work.home');
+    Route::get('/work/add',[WorkController::class,'workAdd'])->name('work.add');
+    Route::post('/work/store',[WorkController::class,'workStore'])->name('work.store');
+    Route::get('/work/edit/{id}',[WorkController::class,'workEdit'])->name('work.edit');
+    Route::post('/work/update/{id}',[WorkController::class,'workUpdate'])->name('work.update');
+    Route::get('/work/view/{id}',[WorkController::class,'workView'])->name('work.view');
+    Route::get('/work/delete/{id}',[WorkController::class,'workDelete'])->name('work.delete');
 
-    Route::get('/blog/index',[BlogController::class,'blogIndex'])->name('blog.index');
-    Route::get('/blog/add',[BlogController::class,'blogAdd'])->name('blog.add');
-    Route::post('/blog/store',[BlogController::class,'blogStore'])->name('blog.store');
-    Route::get('/blog/edit/{id}',[BlogController::class,'blogEdit'])->name('blog.edit');
-    Route::post('/blog/update/{id}',[BlogController::class,'blogUpdate'])->name('blog.update');
-    Route::get('/blog/delete/{id}',[BlogController::class,'blogDelete'])->name('blog.delete');
+//    Route::get('/blog/index',[BlogController::class,'blogIndex'])->name('blog.index');
+//    Route::get('/blog/add',[BlogController::class,'blogAdd'])->name('blog.add');
+//    Route::post('/blog/store',[BlogController::class,'blogStore'])->name('blog.store');
+//    Route::get('/blog/edit/{id}',[BlogController::class,'blogEdit'])->name('blog.edit');
+//    Route::post('/blog/update/{id}',[BlogController::class,'blogUpdate'])->name('blog.update');
+//    Route::get('/blog/delete/{id}',[BlogController::class,'blogDelete'])->name('blog.delete');
+    Route::get('/blog/index',[PersonalBlogController::class,'blogIndex'])->name('blog.index');
+    Route::get('/blog/add',[PersonalBlogController::class,'blogAdd'])->name('blog.add');
+    Route::post('/blog/store',[PersonalBlogController::class,'blogStore'])->name('blog.store');
+    Route::get('/blog/edit/{id}',[PersonalBlogController::class,'blogEdit'])->name('blog.edit');
 
     Route::get('/offer/index',[OfferController::class,'offerIndex'])->name('offer.index');
     Route::get('/offer/add',[OfferController::class,'offerAdd'])->name('offer.add');

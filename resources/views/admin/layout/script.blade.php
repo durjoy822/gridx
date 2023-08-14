@@ -31,7 +31,7 @@
 
 
 <script>
-    const xArray = [{{$project}}, {{$blog}}, {{$subscriber}}, 24, ];
+    const xArray = [ {{$subscriber}}, 24, ];
     const yArray = ["Total Project ", "Total Blog ", "Total Subscriber","Total viewer "];
 
     const data = [{
